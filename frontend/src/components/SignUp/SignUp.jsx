@@ -20,7 +20,7 @@ const SignUp = () => {
   const handleSubmit = async (e) => {
     try {
       e.preventDefault(); 
-     const response =  await axios.post("http://localhost:3000/signup" , {name : name, userid : userid, email : email, password : password});
+     const response =  await axios.post("https://todo-app-backend-six-umber.vercel.app/signup" , {name : name, userid : userid, email : email, password : password});
     //  console.log(response.data);
       navigate('/login');
       // console.log("Form submitted!");      
