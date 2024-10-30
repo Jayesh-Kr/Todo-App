@@ -10,7 +10,13 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 const JWT_SECRET = process.env.JWT_SECRET;
 app.use(express.json());
-app.use(cors())
+app.use(cors(
+    {
+        origin : [""],
+        methods : ["POST" , "GET" , "DELETE" , "PUT"],
+        credentials :  true
+    }
+));
 
 function checkToken(req, res, next){
     try {
