@@ -25,7 +25,7 @@ const TodoPage = () => {
   const fetchTodos = async () => {
     try {
       const id_user = localStorage.getItem("id");
-      const response = await axios.get("http://localhost:3000/get",  
+      const response = await axios.get("https://todo-app-backend-six-umber.vercel.app/get",  
         {
           headers: { 
             token: localStorage.getItem("token"),
@@ -47,7 +47,7 @@ const TodoPage = () => {
     try {
       if (todo.trim() === "") return;
       const id_user = localStorage.getItem("id");
-      await axios.post("http://localhost:3000/add", { todo: todo , completed : false, id :id_user },{
+      await axios.post("https://todo-app-backend-six-umber.vercel.app/add", { todo: todo , completed : false, id :id_user },{
         headers : {
           token : localStorage.getItem("token")
         }
@@ -65,7 +65,7 @@ const TodoPage = () => {
 
   const deleteTodo = async (id) => {
     try {
-      await axios.delete(`http://localhost:3000/delete/${id}`, {
+      await axios.delete(`https://todo-app-backend-six-umber.vercel.app/delete/${id}`, {
         headers : {
           token : localStorage.getItem("token")
         }
@@ -84,7 +84,7 @@ const TodoPage = () => {
   const toggleTodoCompletion = async (id, currentStatus) => {
     try {
         // console.log(currentStatus);
-        await axios.put(`http://localhost:3000/update/${id}`, {
+        await axios.put(`https://todo-app-backend-six-umber.vercel.app/update/${id}`, {
             completed: !currentStatus
         },{
           headers : {
