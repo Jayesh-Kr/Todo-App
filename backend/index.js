@@ -12,7 +12,7 @@ const JWT_SECRET = process.env.JWT_SECRET;
 app.use(express.json());
 app.use(cors(
     {
-        origin : [""],
+        origin : ["https://todo-app-frontend-jet-six.vercel.app"],
         methods : ["POST" , "GET" , "DELETE" , "PUT"],
         credentials :  true
     }
