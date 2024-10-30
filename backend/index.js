@@ -27,7 +27,9 @@ function checkToken(req, res, next){
         res.status(400).json({error});
     }
 }
-
+app.get("/" , (req,res) => {
+    res.send("Hi! Server started ");
+});
 app.post("/add", checkToken, async (req,res) => {
     try{
     const {todo,completed,id} = req.body;
