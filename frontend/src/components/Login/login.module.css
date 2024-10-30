@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.login_box {    
+    padding: 70px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    /* min-width: 350px; */
+    max-width: 450px;
+    width: 100%;
+    height: 480px;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 53%, rgba(197, 240, 251, 1) 93%, rgba(197, 240, 251, 1) 95%);
+}
+
+.h2_auth {
+    font-size: 40px;
+    color: #333;
+    margin-top: 30px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+}
+
+.p_auth {
+    font-size: 14px;
+    color: #666;
+    margin: 10px 0 20px;
+    font-family: "poppins";
+}
+
+
+form input[type="password"],
+form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #EFF2F6;
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-family: "poppins";
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    background-size: 20px;
+}
+.email {
+    background-image: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/svgs/solid/envelope.svg');
+  }
+  
+.password {
+    background-image: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/svgs/solid/lock.svg');
+}
+.switchToSignup {
+    font-family: "poppins";
+    font-size: 14px;
+    opacity: 0.7;
+}
+button {
+    width: 100%;
+    padding: 10px;
+    background: rgb(0,0,0);
+background: linear-gradient(0deg, rgba(0,0,0,1) 16%, rgba(37,38,47,1) 81%);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "poppins";
+    font-weight: 300;
+    letter-spacing: 1.5px;
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #333;
+}

@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Base styles */
+.container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: 20px;
+}
+
+.todo_container {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 40px 60px;
+    margin-top: 25px;
+    border-radius: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    min-width: 350px;
+    max-width: 600px;
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.todo_container:hover {
+    transform: translateY(-5px);
+}
+
+/* Heading styles */
+.heading {
+    font-size: 48px;
+    font-family: 'DynaPuff', cursive;
+    color: #2c3e50;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Search and Add New sections */
+.search, .add_new {
+    width: 100%;
+    padding: 10px 0;
+}
+
+.search p, .add_new p {
+    font-size: 16px;
+    font-family: 'Kanit', sans-serif;
+    margin-bottom: 8px;
+    color: #34495e;
+    font-weight: 500;
+}
+
+.search input, .add_new input {
+    width: 100%;
+    border: 2px solid #e0e0e0;
+    outline: none;
+    border-radius: 12px;
+    height: 50px;
+    padding: 0 20px;
+    font-family: "Kanit", sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background-color: #f8f9fa;
+}
+
+.search input:focus, .add_new input:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 0 4px rgba(52, 152, 219, 0.1);
+    background-color: white;
+}
+
+.search input::placeholder, .add_new input::placeholder {
+    color: #95a5a6;
+}
+
+/* Todo content section */
+.todo_content {
+    width: 100%;
+    padding: 10px 0;
+    max-height: 400px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+}
+
+.todo_content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.todo_content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.todo_content::-webkit-scrollbar-thumb {
+    background: #bdc3c7;
+    border-radius: 10px;
+}
+
+/* Todo list items */
+.todo_list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    width: 100%;
+    border: 1px solid #ecf0f1;
+    border-radius: 12px;
+    height: auto;
+    min-height: 50px;
+    padding: 12px 20px;
+    font-family: "Kanit", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    background-color: white;
+    margin-bottom: 12px;
+    /* transition: all 0.3s ease;    */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.todo_list:hover {
+    /* transform: translateX(5px); */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-color: #3498db;
+}
+
+/* Delete icon */
+.icon {
+    color: #e74c3c;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon:hover {
+    transform: scale(1.2) rotate(8deg);
+    color: #c0392b;
+    background-color: rgba(231, 76, 60, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .todo_container {
+        padding: 30px 20px;
+        min-width: 300px;
+    }
+
+    .heading {
+        font-size: 36px;
+    }
+
+    .search input, .add_new input, .todo_list {
+        font-size: 14px;
+    }
+}

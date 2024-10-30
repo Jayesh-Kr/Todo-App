@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.header_container {
+    padding: 20px 30px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+nav p {
+    font-family: 'Rubik Wet Paint', cursive;
+    font-size: 34px;
+    font-weight: 600;
+    color: #DD5EEF;        
+}
+
+.auth_section {
+    display: flex;
+    gap: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+.signUp, .login {
+    background-color: #272625;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.signUp {
+    background-color: #272625;
+}
+
+.login {
+    background-color: #6E40FF;
+    font-weight: 600;
+}
+
+/* Landing Section */
+.header_landing {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    gap: 5px;
+    text-align: center; /* Align text for smaller screens */
+}
+
+.header_landing p {
+    font-size: 50px;
+    font-family: 'DynaPuff';
+    font-weight: 600;
+}
+
+.get_started {
+    background-color: #6E40FF;
+    color: white;
+    font-family: 'Kanit';
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 18px;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    margin: 18px 0;
+    transition: background-color 0.3s ease;
+}
+
+.header_landing img {
+    width: 425px;
+    max-width: 100%; /* Ensure it doesn’t overflow */
+}
+
+/* Hover Effects */
+.signUp:hover, .login:hover, .get_started:hover {
+    background-color: #4c3ba7;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 813px) {
+    nav p {
+        font-size: 28px;
+    }
+
+    .auth_section {
+        gap: 10px;
+    }
+
+    .signUp, .login {
+        padding: 10px 20px;
+    }
+
+    .header_landing p {
+        font-size: 40px;
+    }
+
+    .get_started {
+        padding: 12px 25px;
+        font-size: 16px;
+    }
+}
+@media (max-width : 661px) {
+    .header_landing{
+        gap : 3px
+    }
+}
+@media (max-width : 560px) {
+    .header_landing{
+        gap : 3px
+    }
+    .header_landing p {
+        font-size: 32px;
+    }
+}
+@media (max-width: 480px) {
+    .header_container {
+        padding: 10px 15px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .header_landing p {
+        font-size: 28px;
+        line-height: 1.2; 
+    }
+
+    .auth_section {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .get_started {
+        padding: 10px 20px;
+    }
+
+    .header_landing img {
+        width: 300px;
+    }
+}
